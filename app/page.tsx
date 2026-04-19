@@ -392,7 +392,7 @@ export default function HomePage() {
                   <a  
                     href="https://share.google/TtXFzPrxBsNaK8bW8" 
                     target="_blank" 
-                    className="text-xs text-slate-300 underline decoration-indigo-400 underline-offset-4 cursor-pointer hover:text-white transition-colors">Xem đường đi trên Google Maps</p>
+                    className="text-xs text-slate-300 underline decoration-indigo-400 underline-offset-4 cursor-pointer hover:text-white transition-colors">Xem đường đi trên Google Maps</a>
                 </div>
               </div>
             </div>
