@@ -135,7 +135,8 @@ export default function HomePage() {
               <div className="absolute -inset-4 bg-indigo-100 rounded-[2rem] -rotate-3 blur-2xl opacity-50"></div>
               <div className="relative h-full w-full rounded-[2rem] overflow-hidden border-8 border-white shadow-2xl">
                 <Image 
-                  src="https://tinyurl.com/3wv3679m" 
+                  src="https://tinyurl.com/3wv3679m"
+                  unoptimized={true}
                   alt="Không gian nhà trọ" 
                   fill 
                   className="object-cover"
@@ -219,6 +220,7 @@ export default function HomePage() {
                   <div className="relative h-64 w-full rounded-3xl overflow-hidden shadow-lg">
                     <Image 
                       src="https://tinyurl.com/4etpzxkn" 
+                      unoptimized={true}
                       alt="Room details" 
                       fill 
                       className="object-cover"
@@ -227,7 +229,8 @@ export default function HomePage() {
                   </div>
                   <div className="relative h-48 w-full rounded-3xl overflow-hidden shadow-lg">
                     <Image 
-                      src="https://tinyurl.com/puxdbnt5" 
+                      src="https://tinyurl.com/puxdbnt5"
+                      unoptimized={true}
                       alt="Room details" 
                       fill 
                       className="object-cover"
@@ -239,6 +242,7 @@ export default function HomePage() {
                   <div className="relative h-48 w-full rounded-3xl overflow-hidden shadow-lg">
                     <Image 
                       src="https://tinyurl.com/rpbru3vj" 
+                      unoptimized={true}
                       alt="Room details" 
                       fill 
                       className="object-cover"
@@ -248,6 +252,7 @@ export default function HomePage() {
                   <div className="relative h-64 w-full rounded-3xl overflow-hidden shadow-lg">
                     <Image 
                       src="https://tinyurl.com/kb86dh2x" 
+                      unoptimized={true}
                       alt="Room details" 
                       fill 
                       className="object-cover"
