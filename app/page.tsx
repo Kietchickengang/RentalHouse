@@ -368,7 +368,7 @@ export default function HomePage() {
               <div className="absolute -inset-2 bg-indigo-500 rounded-[2.5rem] blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
               <div className="relative h-[500px] w-full bg-slate-800 rounded-[2.5rem] overflow-hidden border border-white/10 shadow-3xl">
                 <iframe 
-                  src="https://share.google/TtXFzPrxBsNaK8bW8" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.4206584285223!2d106.68903337583852!3d10.855562157726394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752840506eb613%3A0xe7261a868f77d9c0!2zMTEyLzE0IEtQOCwgbmjDoCB0cuG7jCBTxqFu!5e0!3m2!1svi!2s!4v1713500000000!5m2!1svi!2s" 
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 
@@ -377,22 +377,15 @@ export default function HomePage() {
                   referrerPolicy="no-referrer-when-downgrade"
                   className="grayscale hover:grayscale-0 transition-all duration-700"
                 ></iframe>
-                <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/map/1000/1000?blur=2')] bg-cover opacity-50 grayscale"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                   <div className="relative">
-                      <div className="absolute -inset-4 bg-red-500 rounded-full blur-xl opacity-50 animate-pulse"></div>
-                      <div className="relative bg-white p-3 rounded-full border-4 border-red-500">
-                        <MapPin className="w-8 h-8 text-red-600" />
-                      </div>
-                   </div>
-                </div>
-                <div className="absolute bottom-10 left-10 right-10 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
-                  <p className="text-sm font-bold text-white mb-2">Vị trí nhà trọ</p>
-                  <a  
+                <div className="absolute bottom-6 left-6 right-6 p-4 bg-slate-900/80 backdrop-blur-md rounded-2xl border border-white/10 transition-transform group-hover:scale-[1.02] duration-300">
+                  <p className="text-sm font-bold text-white mb-1">Vị trí nhà trọ trên bản đồ</p>
+                  <a 
                     href="https://share.google/TtXFzPrxBsNaK8bW8" 
-                    target="_blank" 
-                    className="text-xs text-slate-300 underline decoration-indigo-400 underline-offset-4 cursor-pointer hover:text-white transition-colors">Xem đường đi trên Google Maps</a>
+                    target="_blank"
+                    className="text-xs text-indigo-400 font-semibold underline underline-offset-4 hover:text-indigo-300 transition-colors"
+                  >
+                    Mở trong Google Maps để xem đường đi
+                  </a>
                 </div>
               </div>
             </div>
