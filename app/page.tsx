@@ -139,7 +139,7 @@ export default function HomePage() {
                   unoptimized={true}
                   alt="Không gian nhà trọ" 
                   fill 
-                  className="object-cover"
+                  className="object-contain"
                   referrerPolicy="no-referrer"
                 />
               </div>
