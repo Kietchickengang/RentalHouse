@@ -135,7 +135,7 @@ export default function HomePage() {
               <div className="absolute -inset-4 bg-indigo-100 rounded-[2rem] -rotate-3 blur-2xl opacity-50"></div>
               <div className="relative h-full w-full rounded-[2rem] overflow-hidden border-8 border-white shadow-2xl">
                 <Image 
-                  src="https://picsum.photos/seed/nhatro/1000/1000" 
+                  src="https://tinyurl.com/3wv3679m" 
                   alt="Không gian nhà trọ" 
                   fill 
                   className="object-cover"
@@ -218,7 +218,7 @@ export default function HomePage() {
                 <div className="space-y-4 pt-12">
                   <div className="relative h-64 w-full rounded-3xl overflow-hidden shadow-lg">
                     <Image 
-                      src="https://picsum.photos/seed/room1/600/800" 
+                      src="https://tinyurl.com/4etpzxkn" 
                       alt="Room details" 
                       fill 
                       className="object-cover"
@@ -227,7 +227,7 @@ export default function HomePage() {
                   </div>
                   <div className="relative h-48 w-full rounded-3xl overflow-hidden shadow-lg">
                     <Image 
-                      src="https://picsum.photos/seed/room2/600/400" 
+                      src="https://tinyurl.com/puxdbnt5" 
                       alt="Room details" 
                       fill 
                       className="object-cover"
@@ -238,7 +238,7 @@ export default function HomePage() {
                 <div className="space-y-4">
                   <div className="relative h-48 w-full rounded-3xl overflow-hidden shadow-lg">
                     <Image 
-                      src="https://picsum.photos/seed/room3/600/400" 
+                      src="https://tinyurl.com/rpbru3vj" 
                       alt="Room details" 
                       fill 
                       className="object-cover"
@@ -247,7 +247,7 @@ export default function HomePage() {
                   </div>
                   <div className="relative h-64 w-full rounded-3xl overflow-hidden shadow-lg">
                     <Image 
-                      src="https://picsum.photos/seed/room4/600/800" 
+                      src="https://tinyurl.com/kb86dh2x" 
                       alt="Room details" 
                       fill 
                       className="object-cover"
@@ -367,7 +367,16 @@ export default function HomePage() {
             <div className="relative group">
               <div className="absolute -inset-2 bg-indigo-500 rounded-[2.5rem] blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
               <div className="relative h-[500px] w-full bg-slate-800 rounded-[2.5rem] overflow-hidden border border-white/10 shadow-3xl">
-                {/* Mock Map View */}
+                <iframe 
+                  src="https://share.google/TtXFzPrxBsNaK8bW8" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={true} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="grayscale hover:grayscale-0 transition-all duration-700"
+                ></iframe>
                 <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/map/1000/1000?blur=2')] bg-cover opacity-50 grayscale"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -380,7 +389,10 @@ export default function HomePage() {
                 </div>
                 <div className="absolute bottom-10 left-10 right-10 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
                   <p className="text-sm font-bold text-white mb-2">Vị trí nhà trọ</p>
-                  <p className="text-xs text-slate-300 underline decoration-indigo-400 underline-offset-4 cursor-pointer hover:text-white transition-colors">Xem đường đi trên Google Maps</p>
+                  <a  
+                    href="https://share.google/TtXFzPrxBsNaK8bW8" 
+                    target="_blank" 
+                    className="text-xs text-slate-300 underline decoration-indigo-400 underline-offset-4 cursor-pointer hover:text-white transition-colors">Xem đường đi trên Google Maps</p>
                 </div>
               </div>
             </div>
@@ -399,7 +411,7 @@ export default function HomePage() {
           </div>
           
           <p className="text-sm text-slate-500 font-medium">
-            © {new Date().getFullYear()} Nhà Trọ Dương Thanh Sơn. Thiết kế hiện đại & Responsive.
+            © {new Date().getFullYear()} UIT K18 noob.
           </p>
           
           <div className="flex items-center space-x-6">
