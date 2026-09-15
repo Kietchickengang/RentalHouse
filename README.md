@@ -1,20 +1,62 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Rental House Landing Page
 
-# Run and deploy your AI Studio app
+A modern landing page for a rental property, built with Next.js to present the house, amenities, contact details, and location in a clean and responsive layout.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/ba4265c3-f745-444c-a4b4-27be93000d8b
+- Hero section highlighting key rental information
+- Amenities and service presentation
+- Contact call-to-action for quick inquiries
+- Responsive design for desktop and mobile
+- Embedded map for property location
+- Clean marketing-focused interface
 
-## Run Locally
+## Tech Stack
 
-**Prerequisites:**  Node.js
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
 
+## Getting Started
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Prerequisites
+
+- Node.js 18+
+- npm
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run locally
+
+```bash
+npm run dev
+```
+
+Open in the browser:
+
+```bash
+http://localhost:3000
+```
+
+### Production build
+
+```bash
+npm run build
+```
+
+### Start production server
+
+```bash
+npm start
+```
+
+## Notes
+
+This project is a general-purpose rental house landing page focused on clear presentation and easy customer contact.

@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   description: 'Nhà trọ Dương Thanh Sơn tại Quận 12, TP.HCM. Diện tích 20m2 có gác, wifi miễn phí, camera an ninh 24/7. Liên hệ ngay Mr. Sơn 0776159120.',
   keywords: ['nhà trọ quận 12', 'phòng trọ an phú đông', 'thuê phòng trọ giá rẻ', 'nhà trọ Dương Thanh Sơn'],
   authors: [{ name: 'Dương Thanh Sơn' }],
+  icons: {
+    icon: '/wolf.ico'
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
