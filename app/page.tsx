@@ -372,7 +372,7 @@ export default function HomePage() {
                       ].map(e => {
                         return (
                           <>
-                            <p className="flex items-start text-sm sm:text-md font-medium text-slate-100 leading-relaxed">
+                            <p className="flex items-start text-md sm:text-md font-medium text-slate-100 leading-relaxed">
                               <Dot className="flex-shrink-0 mt-0.5"/>{e}
                             </p>
                           </>
