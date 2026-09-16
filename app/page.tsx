@@ -2,8 +2,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { 
-  Wifi,  
+import {  
   CheckCircle2, 
   Phone, 
   Clock, 
@@ -17,7 +16,9 @@ import {
   BrushCleaning,
   HandCoins,
   VectorSquare,
-  MessagesSquare
+  MessagesSquare,
+  MapPinHouse,
+  Dot
 } from 'lucide-react';
 import Image from 'next/image';
 import {Dog} from '../helper/dog.jsx'
@@ -39,10 +40,10 @@ const staggerChildren = {
 
 const featureCards = [
   {
-    icon: Wifi,
-    title: 'Free Wifi',
+    icon: MapPinHouse,
+    title: 'Vị trí thuận lợi',
     description:
-      'Internet tốc độ cao 24/7 hoàn toàn miễn phí, đáp ứng trọn vẹn nhu cầu làm việc và giải trí.',
+      'Gần trường đại học Nguyễn Tất Thành, tiểu học Phạm Văn Chiêu, và THCS An Phú Đông.',
     iconBg: 'bg-blue-50',
     iconColor: 'text-blue-600'
   },
@@ -130,7 +131,7 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <section id="intro" className="relative pt-10 pb-20 lg:pt-20 lg:pb-32 overflow-hidden bg-white">
+      <section id="intro" className="relative pt-20 pb-20 lg:pt-20 lg:pb-32 overflow-hidden bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div 
@@ -140,17 +141,10 @@ export default function HomePage() {
               variants={staggerChildren}
               className="z-10"
             >
-              <motion.div variants={fadeInUp} className="inline-flex items-center space-x-2 bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wider mb-6">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                </span>
-                <span>Hiện Vẫn Còn Phòng</span>
-              </motion.div>
-              <motion.h1 variants={fadeInUp} className="text-5xl lg:text-7xl font-extrabold text-slate-900 leading-tight mb-6">
+              <motion.h1 variants={fadeInUp} className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-slate-900 leading-tight mb-6">
                 Nhà Trọ <span className="text-indigo-600">Dương Thanh Sơn</span>
               </motion.h1>
-              <motion.p variants={fadeInUp} className="text-xl text-slate-600 max-w-lg mb-10 leading-relaxed">
+              <motion.p variants={fadeInUp} className="text-base sm:text-xl text-slate-600 max-w-lg mb-10 leading-relaxed">
                 <span className="text-indigo-600 font-bold">Tiện nghi - Uy tín - Giá cả hợp lý</span>. Không gian sống lý tưởng tại Quận 12 cho người đi làm và sinh viên.
               </motion.p>
               <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
@@ -201,11 +195,11 @@ export default function HomePage() {
       </section>
 
       {/* Features - Bento Grid */}
-      <section id="features" className="py-18 bg-slate-50 text-slate-900">
+      <section id="features" className="py-12 sm:py-18 bg-slate-50 text-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-md font-bold text-indigo-600 uppercase tracking-widest mb-4">Chúng tôi cung cấp</h2>
-            <p className="text-4xl font-extrabold tracking-tight">Trải nghiệm sống tuyệt vời đầy đủ tiện nghi</p>
+            <p className="text-3xl sm:text-4xl font-extrabold tracking-tight">Trải nghiệm sống tuyệt vời đầy đủ tiện nghi</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -251,13 +245,13 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="service" className="py-24 bg-white border-y border-slate-100 text-slate-900">
+      <section id="service" className="py-14 sm:py-24 bg-white border-y border-slate-100 text-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-20 items-center">
             <div className="order-2 lg:order-1 relative">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-4 pt-12">
-                  <div className="relative h-64 w-full rounded-3xl overflow-hidden shadow-lg">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                <div className="space-y-3 sm:space-y-4 pt-6 sm:pt-12">
+                  <div className="relative h-36 sm:h-64 w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg">
                     <Image 
                       src="https://tinyurl.com/4etpzxkn" 
                       unoptimized={true}
@@ -267,7 +261,7 @@ export default function HomePage() {
                       referrerPolicy="no-referrer"
                     />
                   </div>
-                  <div className="relative h-48 w-full rounded-3xl overflow-hidden shadow-lg">
+                  <div className="relative h-28 sm:h-48 w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg">
                     <Image 
                       src="https://tinyurl.com/puxdbnt5"
                       unoptimized={true}
@@ -278,8 +272,8 @@ export default function HomePage() {
                     />
                   </div>
                 </div>
-                <div className="space-y-4">
-                  <div className="relative h-48 w-full rounded-3xl overflow-hidden shadow-lg">
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="relative h-28 sm:h-48 w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg">
                     <Image 
                       src="https://tinyurl.com/rpbru3vj" 
                       unoptimized={true}
@@ -289,7 +283,7 @@ export default function HomePage() {
                       referrerPolicy="no-referrer"
                     />
                   </div>
-                  <div className="relative h-64 w-full rounded-3xl overflow-hidden shadow-lg">
+                  <div className="relative h-36 sm:h-64 w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg">
                     <Image 
                       src="https://tinyurl.com/kb86dh2x" 
                       unoptimized={true}
@@ -305,16 +299,16 @@ export default function HomePage() {
 
             <div className="order-1 lg:order-2">
               <h2 className="text-md font-bold text-indigo-600 uppercase tracking-widest mb-4">Chất lượng tạo nên trải nghiệm</h2>
-              <h3 className="text-4xl font-extrabold mb-8 tracking-tight">Bạn sẽ nhận được gì khi ở đây?</h3>
+              <h3 className="text-3xl sm:text-4xl font-extrabold mb-8 tracking-tight">Bạn sẽ nhận được gì?</h3>
               
               <div className="space-y-6">
                 {[
-                  "Diện tích phòng rộng - thoáng, thiết kế có gác lửng tiện lợi",
+                  "Diện tích phòng rộng, thiết kế có gác lửng tiện lợi",
+                  "Phòng không leo lầu, không chung chủ, giờ giấc tự do",
                   "Hệ thống camera an ninh chạy 24/7",
                   "Dịch vụ khắc phục sự cố điện, nước nhanh chóng",
-                  "Đường truyền Wifi ổn định, cường độ mạnh",
                   "Môi trường sống văn minh, yên tĩnh và an toàn",
-                  "Có thể lắp thêm máy lạnh (tùy chọn)"
+                  "Có thể tự lắp thêm máy lạnh, wifi"
                 ].map((item, i) => (
                   <motion.div 
                     initial={{ opacity: 0, x: 20 }}
@@ -323,10 +317,10 @@ export default function HomePage() {
                     key={i} 
                     className="flex items-start space-x-4 group"
                   >
-                    <div className="p-1 bg-indigo-50 rounded-full group-hover:bg-indigo-600 transition-colors">
+                    <div className="p-1 bg-indigo-50 rounded-full group-hover:bg-indigo-600 transition-colors flex-shrink-0">
                       <CheckCircle2 className="w-5 h-5 text-indigo-600 group-hover:text-white" />
                     </div>
-                    <span className="text-lg text-slate-700 font-medium">{item}</span>
+                    <span className="text-base sm:text-lg text-slate-700 font-medium">{item}</span>
                   </motion.div>
                 ))}
               </div>
@@ -335,9 +329,9 @@ export default function HomePage() {
                 <div className="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center flex-shrink-0 animate-pulse">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
-                <div className='flex items-center text-center justify-center space-x-3'>
-                  <div className="font-bold uppercase text-md tracking-widest">Trạng thái:</div>
-                  <div className="text-emerald-600 font-extrabold text-xl">VẪN CÒN PHÒNG</div>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                  <div className="font-bold uppercase text-sm sm:text-md tracking-widest">Trạng thái:</div>
+                  <div className="text-emerald-600 font-extrabold text-lg sm:text-xl">VẪN CÒN PHÒNG</div>
                 </div>
               </div>
             </div>
@@ -346,23 +340,23 @@ export default function HomePage() {
       </section>
 
       {/* Price */}
-      <section id="cost" className="py-18 bg-slate-50 text-slate-900">
+      <section id="cost" className="py-12 sm:py-18 bg-slate-50 text-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <h2 className="text-md font-bold text-indigo-600 uppercase tracking-widest mb-4">Tham khảo ngay</h2>
-            <p className="text-4xl font-extrabold tracking-tight">Bảng Giá Dịch Vụ</p>
+            <p className="text-3xl sm:text-4xl font-extrabold tracking-tight">Bảng Giá Dịch Vụ</p>
           </div>
           <CostTable/>
         </div>
       </section>
 
       {/* Location & Contact */}
-      <section id="contact" className="py-24 bg-slate-900 text-white selection:bg-indigo-500">
+      <section id="contact" className="py-14 sm:py-24 bg-slate-900 text-white selection:bg-indigo-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16">
             <div>
               <h2 className="text-sm font-bold text-indigo-400 uppercase tracking-widest mb-4">Liên hệ & Vị trí</h2>
-              <h3 className="text-4xl font-extrabold mb-10 tracking-tight">Làm sao để tìm thấy chúng tôi?</h3>
+              <h3 className="text-3xl sm:text-4xl font-extrabold mb-10 tracking-tight">Liên hệ ngay tại</h3>
               
               <div className="space-y-8">
                 <div className="flex items-start space-x-6">
@@ -371,9 +365,20 @@ export default function HomePage() {
                   </div>
                   <div>
                     <div className="text-indigo-400 font-bold text-xs uppercase tracking-widest mb-1">Địa chỉ</div>
-                    <p className="text-md font-medium text-slate-300 leading-relaxed">
-                      112/14 Kp8 Đ. Nguyễn Thị Nhuận, P. APĐ, Quận 12, Tp.HCM
-                    </p>
+                    {
+                      [
+                        "112/14 Kp 6, Đ.Nguyễn Thị Nhuần, P.APĐ, Tp.HCM",
+                        "43/56 Kp 14, Đ.Vườn Lài, P.APĐ, Tp.HCM"
+                      ].map(e => {
+                        return (
+                          <>
+                            <p className="flex items-start text-sm sm:text-md font-medium text-slate-100 leading-relaxed">
+                              <Dot className="flex-shrink-0 mt-0.5"/>{e}
+                            </p>
+                          </>
+                        )
+                      })
+                    }
                   </div>
                 </div>
 
@@ -397,11 +402,11 @@ export default function HomePage() {
                   <div>
                     <div className="text-indigo-400 font-bold text-xs uppercase tracking-widest mb-1">Thời gian đón khách</div>
                     <div className="space-y-2">
-                      <p className="text-slate-300 font-medium flex justify-between w-64">
+                      <p className="text-sm sm:text-base text-slate-300 font-medium flex justify-between gap-4 w-full max-w-64">
                         <span>Thứ 2 - Thứ 6:</span>
                         <span className="text-white">18h → 21h</span>
                       </p>
-                      <p className="text-slate-300 font-medium flex justify-between w-64">
+                      <p className="text-sm sm:text-base text-slate-300 font-medium flex justify-between gap-4 w-full max-w-64">
                         <span>Thứ 7 - Chủ Nhật:</span>
                         <span className="text-white">9h → 20h</span>
                       </p>
@@ -414,7 +419,7 @@ export default function HomePage() {
                 <a 
                   href="https://zalo.me/0776159120" 
                   target="_blank"
-                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-indigo-600/20"
+                  className="px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-indigo-600/20"
                 >
                   Chat Zalo ngay
                 </a>

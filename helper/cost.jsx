@@ -46,42 +46,41 @@ export const CostTable = ({ items = defaultCosts }) => {
 
   return (
     <div className="w-full overflow-hidden rounded-2xl bg-white shadow-sm font-sans">
-      <div className="overflow-x-auto">
+      {/* ---------- Desktop ---------- */}
+      <div className="hidden sm:block overflow-x-auto">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="text-indigo-500 border-b border-slate-100 dark:border-slate-800 text-xl font-semibold tracking-wide bg-gray-100">
-              <th className="py-3.5 px-6">Tên dịch vụ</th>
-              <th className="py-3.5 px-6">Mô tả</th>
-              <th className="py-3.5 px-6 text-left">Chi phí</th>
+            <tr className="text-indigo-500 border-b border-slate-100 dark:border-slate-800 text-base md:text-xl font-semibold tracking-wide bg-gray-100">
+              <th className="py-3 px-4 md:py-3.5 md:px-6">Tên dịch vụ</th>
+              <th className="py-3 px-4 md:py-3.5 md:px-6">Mô tả</th>
+              <th className="py-3 px-4 md:py-3.5 md:px-6 text-left">Chi phí</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60 text-md">
+          <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60 text-sm md:text-md">
             {items.map((item) => {
               const Icon = item.icon;
-              const pr = item.price.map(e => formatVND(e))
-            
+              const pr = item.price.map((e) => formatVND(e));
+
               return (
-                <tr 
-                  key={item.id} 
-                  className="hover:bg-slate-50/70 dark:hover:bg-slate-800/10 transition-colors"
+                <tr
+                  key={item.id}
+                  className="text-base font-medium hover:bg-slate-50/70 dark:hover:bg-slate-800/10 transition-colors"
                 >
-                  <td className="py-4 px-6">
-                    <div className="flex items-center gap-3">
+                  <td className="py-3 px-4 md:py-4 md:px-6">
+                    <div className="flex items-center gap-2 md:gap-3">
                       {Icon && (
-                        <div className={`p-2 rounded-full ${item.color} flex-shrink-0`}>
-                          <Icon className="w-4 h-4" />
+                        <div className={`p-1.5 md:p-2 rounded-full ${item.color} flex-shrink-0`}>
+                          <Icon className="w-4 h-4 md:w-4 md:h-4" />
                         </div>
                       )}
-                      <span className="font-semibold">
-                        {item.name}
-                      </span>
+                      <span className="font-semibold">{item.name}</span>
                     </div>
                   </td>
-                  <td className="py-4 px-6 text-md md:text-md">
+                  <td className="py-3 px-4 md:py-4 md:px-6 text-md md:text-md">
                     {item.description}
                   </td>
-                  <td className="py-4 px-6 text-md text-left">
-                    {pr.length < 2? pr[0]:`${pr[0]} - ${pr[1]}`}
+                  <td className="py-3 px-4 md:py-4 md:px-6 text-md md:text-md text-left whitespace-nowrap">
+                    {pr.length < 2 ? pr[0] : `${pr[0]} - ${pr[1]}`}
                     {item.cntUnit}
                   </td>
                 </tr>
@@ -89,6 +88,36 @@ export const CostTable = ({ items = defaultCosts }) => {
             })}
           </tbody>
         </table>
+      </div>
+
+      {/* ---------- Mobile ---------- */}
+      <div className="sm:hidden divide-y divide-slate-100">
+        {items.map((item) => {
+          const Icon = item.icon;
+          const pr = item.price.map((e) => formatVND(e));
+
+          return (
+            <div key={item.id} className="p-4 flex flex-col gap-2">
+              <div className="flex items-center gap-2.5">
+                {Icon && (
+                  <div className={`p-1.5 rounded-full ${item.color} flex-shrink-0`}>
+                    <Icon className="w-5 h-5" />
+                  </div>
+                )}
+                <span className="font-semibold text-md text-slate-900">{item.name}</span>
+              </div>
+
+              <p className="text-sm leading-snug pl-[2.75rem]">
+                {item.description}
+              </p>
+
+              <div className="text-sm font-medium text-indigo-600 pl-[2.75rem]">
+                {pr.length < 2 ? pr[0] : `${pr[0]} - ${pr[1]}`}
+                <span className="font-normal">{item.cntUnit}</span>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
