@@ -43,7 +43,7 @@ const featureCards = [
     icon: MapPinHouse,
     title: 'Vị trí thuận lợi',
     description:
-      'Gần trường đại học Nguyễn Tất Thành, tiểu học Phạm Văn Chiêu, và THCS An Phú Đông.',
+      'Gần trường đại học Nguyễn Tất Thành, trường học các cấp phường An Phú Đông. Thuận tiện đi chợ, mua sắm, giải trí.',
     iconBg: 'bg-blue-50',
     iconColor: 'text-blue-600'
   },
